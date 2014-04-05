@@ -16,7 +16,7 @@
 						   (at ?sokoban ?x)
 						   (leftOf ?y ?x)   					;location y is to the left of location x
 						   (clear ?y))      					;and y is empty/clear, so move left to y
-		:effect (and (at ?sokoban ?y)
+		:effect (and (at ?sokoban ?y) (clear ?x)
 				(not (at ?sokoban ?x)) (not (clear ?y))))
 
 	(:action moveRight
@@ -27,7 +27,7 @@
 							(at ?sokoban ?x)
 							(leftOf ?x ?y)    					;location x is to the left of y
 							(clear ?y))       					;and y is clear, so move right to y
-		:effect (and (at ?sokoban ?y)
+		:effect (and (at ?sokoban ?y) (clear ?x)
 				(not (at ?sokoban ?x)) (not (clear ?y))))
 
 	(:action moveUp
@@ -38,7 +38,7 @@
 						  (at ?sokoban ?x)
 						  (below ?x ?y)      					;location x is below location y
 						  (clear ?y))        					;and y is clear, so move up to y
-		:effect (and (at ?sokoban ?y)
+		:effect (and (at ?sokoban ?y) (clear ?x)
 				(not (at ?sokoban ?x)) (not (clear ?y))))
 
 	(:action moveDown
@@ -49,7 +49,7 @@
 						  (at ?sokoban ?x)
 						  (below ?y ?x)      					;location y is below location x
 						  (clear ?y))        					;and y is clear, so move down to y
-		:effect (and (at ?sokoban ?y)
+		:effect (and (at ?sokoban ?y) (clear ?x)
 				(not (at ?sokoban ?x)) (not (clear ?y))))
 
 	(:action pushLeft
