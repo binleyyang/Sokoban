@@ -5,9 +5,7 @@
 		   (sokoban sokoban2)
 		   (crate crate1)	
 		   (crate crate2)
-		   (location l1) (location l2) (location l5) (location l6) (location l9) (location l10) (location l11) 
-		   (location l12) (location l13) (location l14) (location l15) (location l16) (location l17) (location l18)
-
+		   
 		   ;;horizontal relationships
 		   (leftOf l1 l2) 
 		   (leftOf l5 l6) 

@@ -5,14 +5,11 @@
 				 (leftOf ?x ?y) 								;location x is to the left of locaiton y
 				 (below ?x ?y)  								;location x is below location y
 				 (at ?x ?y)     								;object x is at location y
-				 (clear ?x)    									;location x is clear (does not have a wall)
-				 (location ?x))									;x is a location
+				 (clear ?x))									;x is a location
 
 	(:action moveLeft
 		:parameters (?sokoban ?x ?y)
 		:precondition (and (sokoban ?sokoban)
-						   (location ?x)
-						   (location ?y)	
 						   (at ?sokoban ?x)
 						   (leftOf ?y ?x)   					;location y is to the left of location x
 						   (clear ?y))      					;and y is empty/clear, so move left to y
@@ -22,8 +19,6 @@
 	(:action moveRight
 		:parameters (?sokoban ?x ?y)
 		:precondition (and (sokoban ?sokoban)
-							(location ?x)
-						   	(location ?y)
 							(at ?sokoban ?x)
 							(leftOf ?x ?y)    					;location x is to the left of y
 							(clear ?y))       					;and y is clear, so move right to y
@@ -33,8 +28,6 @@
 	(:action moveUp
 		:parameters (?sokoban ?x ?y)
 		:precondition (and (sokoban ?sokoban)
-						  (location ?x)
-						  (location ?y)
 						  (at ?sokoban ?x)
 						  (below ?x ?y)      					;location x is below location y
 						  (clear ?y))        					;and y is clear, so move up to y
@@ -44,8 +37,6 @@
 	(:action moveDown
 		:parameters (?sokoban ?x ?y)
 		:precondition (and (sokoban ?sokoban)
-						  (location ?x)
-						  (location ?y)
 						  (at ?sokoban ?x)
 						  (below ?y ?x)      					;location y is below location x
 						  (clear ?y))        					;and y is clear, so move down to y
@@ -56,9 +47,6 @@
 		:parameters (?sokoban ?x ?y ?z ?crate)
 		:precondition (and (sokoban ?sokoban)
 							(crate ?crate)
-							(location ?x)
-						   	(location ?y)
-						   	(location ?z)
 							(leftOf ?y ?x)  					;location y is left of x
 							(leftOf ?z ?y)    					;z (destination for block) is left of where the block currently is
 							(at ?sokoban ?x)   					;sokoban player is at x
@@ -75,9 +63,6 @@
 		:parameters (?sokoban ?x ?y ?z ?crate)
 		:precondition (and (sokoban ?sokoban)
 							(crate ?crate)
-							(location ?x)
-						   	(location ?y)
-						   	(location ?z)
 							(leftOf ?x ?y)						;x is left of y
 							(leftOf ?y ?z)						;y is left of z
 							(at ?sokoban ?x)					;sokoban is at x
@@ -94,9 +79,6 @@
 		:parameters (?sokoban ?x ?y ?z ?crate)
 		:precondition (and (sokoban ?sokoban)
 							(crate ?crate)
-							(location ?x)
-						   	(location ?y)
-						   	(location ?z)
 							(below ?x ?y)						;x is below y
 							(below ?y ?z)						;y is below z
 							(at ?sokoban ?x)					;sokoban is at x
@@ -114,9 +96,6 @@
 		:parameters (?sokoban ?x ?y ?z ?crate)
 		:precondition (and (sokoban ?sokoban)
 							(crate ?crate)
-							(location ?x)
-						   	(location ?y)
-						   	(location ?z)
 							(below ?y ?x)						;y is below x
 							(below ?z ?y)						;z is below y
 							(at ?sokoban ?x)					;sokoban is at x

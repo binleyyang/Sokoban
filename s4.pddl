@@ -24,11 +24,6 @@
 		   (crate crate10)	
 		   (crate crate11)
 
-		   (location l1) (location l2) (location l3) (location l4) (location l5) (location l6) (location l7) (location l8) (location l9) 
-		   (location l10) (location l11) (location l12) (location l13) (location l14) (location l15) (location l16) (location l17) (location l18)
-		   (location l19) (location l20) (location l21) (location l22) (location l23) (location l24) (location l25) (location l26) (location l27) 
-		   (location l28) (location l29) (location l30) (location l31) (location l32) (location l33) (location l34) (location l35) (location l36)
-
 		   ;;horizontal relationships
 		   (leftOf l1 l2) (leftOf l2 l3) (leftOf l3 l4) (leftOf l4 l5) (leftOf l5 l6)
 		   (leftOf l7 l8) (leftOf l8 l9) (leftOf l9 l10) (leftOf l10 l11) (leftOf l11 l12)

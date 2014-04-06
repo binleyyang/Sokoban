@@ -3,8 +3,6 @@
 	(:objects sokoban, crate2, l1, l2, l5, l6, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18)
 	(:init (sokoban sokoban) 
 		   (crate crate2)
-		   (location l1) (location l2) (location l5) (location l6) (location l9) (location l10) (location l11) 
-		   (location l12) (location l13) (location l14) (location l15) (location l16) (location l17) (location l18)
 
 		   ;;horizontal relationships
 		   (leftOf l1 l2) 

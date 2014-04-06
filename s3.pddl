@@ -7,9 +7,6 @@
 		   (crate crate1)	
 		   (crate crate2)
 		   (crate crate3)
-		   (location l1) (location l3) (location l4) (location l5) (location l6) (location l7) (location l9) (location l11) (location l12) 
-		   (location l13) (location l15) (location l16) (location l17) (location l19) (location l21) (location l23) (location l25) (location l27) 
-		   (location l29) (location l31) (location l32) (location l33) (location l35)
 
 		   ;;horizontal relationships
 		   (leftOf l3 l4) (leftOf l4 l5) (leftOf l5 l6)
